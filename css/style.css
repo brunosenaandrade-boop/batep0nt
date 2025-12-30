@@ -1019,6 +1019,110 @@ button {
     line-height: 1.7;
 }
 
+/* ---------- Como Comprar ---------- */
+.como-comprar {
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.como-comprar__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.como-comprar__intro {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 40px;
+}
+
+.como-comprar__avatar {
+    flex-shrink: 0;
+}
+
+.como-comprar__text h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.como-comprar__role {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 12px !important;
+}
+
+.como-comprar__text p {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.como-comprar__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.como-comprar__step {
+    background: var(--white);
+    padding: 24px 16px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.como-comprar__step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.como-comprar__step-content h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+}
+
+.como-comprar__step-content p {
+    font-size: 13px;
+    color: var(--gray-500);
+    line-height: 1.5;
+}
+
+.como-comprar__benefits {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.como-comprar__benefit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
 /* ---------- Preco ---------- */
 .preco {
     padding: var(--section-padding);
@@ -1512,6 +1616,22 @@ button {
         flex-direction: column;
         gap: 16px;
     }
+
+    /* Como Comprar Mobile */
+    .como-comprar__intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .como-comprar__steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .como-comprar__benefits {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1611,5 +1731,18 @@ button {
 
     .section-subtitle {
         font-size: 16px;
+    }
+
+    /* Como Comprar Mobile Small */
+    .como-comprar__steps {
+        grid-template-columns: 1fr;
+    }
+
+    .como-comprar__intro {
+        padding: 24px;
+    }
+
+    .como-comprar__text h3 {
+        font-size: 20px;
     }
 }
