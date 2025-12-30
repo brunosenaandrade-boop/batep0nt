@@ -15,6 +15,31 @@
 
     <title>BatePonto - Controle de Ponto com Reconhecimento Facial por IA</title>
 
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'SEU_PIXEL_ID_AQUI'); // TODO: Substituir pelo seu Pixel ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/></noscript>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=SEU_GA_ID_AQUI"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'SEU_GA_ID_AQUI'); // TODO: Substituir pelo seu GA ID
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -504,68 +529,45 @@
         </div>
     </section>
 
-    <!-- ========== DEPOIMENTOS ========== -->
-    <section class="depoimentos" id="depoimentos">
+    <!-- ========== BENEFICIOS ========== -->
+    <section class="beneficios" id="beneficios">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">DEPOIMENTOS</span>
-                <h2 class="section-title">Quem usa, recomenda</h2>
+                <span class="section-tag">BENEFÍCIOS</span>
+                <h2 class="section-title">Por que empresários escolhem o BatePonto</h2>
             </div>
 
-            <div class="testimonials__grid">
-                <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial__stars">
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
+            <div class="beneficios__grid">
+                <div class="beneficio-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="beneficio-card__icon">
+                        <i data-lucide="ban" style="width:32px;height:32px"></i>
                     </div>
-                    <p class="testimonial__text">"Antes eu usava caderninho e vivia com medo de processo. Agora tenho tudo registrado com foto e hora certinha. Melhor investimento que fiz!"</p>
-                    <div class="testimonial__author">
-                        <div class="testimonial__avatar">H</div>
-                        <div class="testimonial__info">
-                            <strong>Handerson</strong>
-                            <span>Borracharia</span>
-                        </div>
-                    </div>
+                    <h3>Fim do "Amigo Bate Ponto"</h3>
+                    <p>Com reconhecimento facial, é impossível um funcionário registrar ponto pelo outro. Cada registro é único e verificável.</p>
                 </div>
 
-                <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial__stars">
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
+                <div class="beneficio-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="beneficio-card__icon">
+                        <i data-lucide="piggy-bank" style="width:32px;height:32px"></i>
                     </div>
-                    <p class="testimonial__text">"Pagava R$400/mês em outro sistema. Com o BatePonto paguei uma vez e nunca mais. Em 2 meses já tinha economizado o valor do investimento."</p>
-                    <div class="testimonial__author">
-                        <div class="testimonial__avatar">M</div>
-                        <div class="testimonial__info">
-                            <strong>Marcos</strong>
-                            <span>Lanchonete</span>
-                        </div>
-                    </div>
+                    <h3>Economia de até R$6.000/ano</h3>
+                    <p>Sistemas concorrentes cobram R$20-50 por funcionário/mês. Com o BatePonto você paga uma vez e usa para sempre.</p>
                 </div>
 
-                <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial__stars">
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
-                        <i data-lucide="star" class="star-filled"></i>
+                <div class="beneficio-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="beneficio-card__icon">
+                        <i data-lucide="scale" style="width:32px;height:32px"></i>
                     </div>
-                    <p class="testimonial__text">"Meus funcionários ficaram impressionados com a tecnologia. E o melhor: impossível um bater ponto pelo outro. Acabou a bagunça!"</p>
-                    <div class="testimonial__author">
-                        <div class="testimonial__avatar">C</div>
-                        <div class="testimonial__info">
-                            <strong>Carla</strong>
-                            <span>Salão de Beleza</span>
-                        </div>
-                    </div>
+                    <h3>Proteção em Processos</h3>
+                    <p>Registros com foto, data e hora servem como prova legal. Processos trabalhistas custam R$15.000 a R$50.000 em média.</p>
                 </div>
+            </div>
+
+            <div class="beneficios__cta" data-aos="fade-up">
+                <p class="beneficios__destaque">
+                    <i data-lucide="trending-up" style="width:24px;height:24px;color:#10b981"></i>
+                    <strong>Mais de 500 empresas</strong> já protegem seus negócios com controle de ponto profissional
+                </p>
             </div>
         </div>
     </section>
@@ -842,6 +844,10 @@
                         <span>Bate<strong>Ponto</strong></span>
                     </a>
                     <p>Sistema de Controle de Ponto com Reconhecimento Facial por IA. Proteja sua empresa de processos trabalhistas.</p>
+                    <p class="footer__cnpj">
+                        <strong>BS Developer</strong><br>
+                        CNPJ: 26.630.862/0001-91
+                    </p>
                 </div>
 
                 <div class="footer__links">
@@ -859,7 +865,7 @@
                     <ul>
                         <li>
                             <a href="https://wa.me/5548998649898?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BatePonto%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank">
-                                <i data-lucide="message-circle"></i> WhatsApp
+                                <i data-lucide="message-circle"></i> (48) 99864-9898
                             </a>
                         </li>
                         <li>
@@ -871,11 +877,31 @@
                 </div>
             </div>
 
+            <!-- Selos de Segurança -->
+            <div class="footer__seals">
+                <div class="seal">
+                    <i data-lucide="shield-check" style="width:24px;height:24px"></i>
+                    <span>Site Seguro</span>
+                </div>
+                <div class="seal">
+                    <i data-lucide="lock" style="width:24px;height:24px"></i>
+                    <span>Dados Protegidos</span>
+                </div>
+                <div class="seal">
+                    <i data-lucide="credit-card" style="width:24px;height:24px"></i>
+                    <span>Pix, Cartão ou Boleto</span>
+                </div>
+                <div class="seal">
+                    <i data-lucide="rotate-ccw" style="width:24px;height:24px"></i>
+                    <span>7 Dias de Garantia</span>
+                </div>
+            </div>
+
             <div class="footer__bottom">
-                <p>&copy; 2025 BatePonto. Todos os direitos reservados.</p>
+                <p>&copy; 2025 BatePonto - BS Developer. CNPJ: 26.630.862/0001-91. Todos os direitos reservados.</p>
                 <div class="footer__legal">
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">Termos de Uso</a>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
                 </div>
             </div>
         </div>

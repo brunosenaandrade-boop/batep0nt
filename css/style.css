@@ -956,6 +956,73 @@ button {
     color: var(--gray-500);
 }
 
+/* ---------- Benefícios ---------- */
+.beneficios {
+    padding: var(--section-padding);
+    background: var(--white);
+}
+
+.beneficios__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.beneficio-card {
+    background: var(--gray-50);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.beneficio-card:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.beneficio-card__icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--white);
+}
+
+.beneficio-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+}
+
+.beneficio-card p {
+    font-size: 15px;
+    color: var(--gray-500);
+    line-height: 1.6;
+}
+
+.beneficios__cta {
+    text-align: center;
+}
+
+.beneficios__destaque {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: var(--gray-700);
+}
+
 /* ---------- FAQ ---------- */
 .faq {
     padding: var(--section-padding);
@@ -1448,6 +1515,36 @@ button {
     color: var(--white);
 }
 
+.footer__cnpj {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--gray-500);
+    line-height: 1.6;
+}
+
+.footer__seals {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 32px 0;
+    margin-bottom: 24px;
+    border-top: 1px solid var(--gray-800);
+    border-bottom: 1px solid var(--gray-800);
+}
+
+.seal {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-400);
+    font-size: 13px;
+}
+
+.seal i, .seal svg {
+    color: var(--success);
+}
+
 /* ---------- WhatsApp Float ---------- */
 .whatsapp-float {
     position: fixed;
@@ -1631,6 +1728,27 @@ button {
         flex-direction: column;
         align-items: center;
         gap: 16px;
+    }
+
+    /* Benefícios Mobile */
+    .beneficios__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios__destaque {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 24px;
+    }
+
+    /* Footer Seals Mobile */
+    .footer__seals {
+        gap: 16px;
+    }
+
+    .seal {
+        flex-basis: 45%;
+        justify-content: center;
     }
 }
 
