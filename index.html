@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BatePonto - Sistema de Controle de Ponto com Reconhecimento Facial por IA. Funciona 100% offline, sem mensalidade. Proteja sua empresa de processos trabalhistas.">
+    <meta name="keywords" content="ponto eletronico, reconhecimento facial, controle de ponto, CLT, horas extras, anti-fraude">
+    <meta name="author" content="BSDeveloper">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BatePonto - Controle de Ponto com IA">
+    <meta property="og:description" content="Elimine fraudes e evite processos trabalhistas com reconhecimento facial. Funciona offline, sem mensalidade.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+
+    <title>BatePonto - Controle de Ponto com Reconhecimento Facial por IA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i data-lucide="scan-face" class="logo-icon"></i>
+                <span>Bate<strong>Ponto</strong></span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#problema" class="nav__link">Por que usar</a></li>
+                    <li><a href="#funcionalidades" class="nav__link">Funcionalidades</a></li>
+                    <li><a href="#comparativo" class="nav__link">Comparativo</a></li>
+                    <li><a href="#faq" class="nav__link">FAQ</a></li>
+                    <li><a href="#preco" class="nav__link nav__link--cta">Comprar Agora</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i data-lucide="x"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="container hero__container">
+            <div class="hero__content" data-aos="fade-right">
+                <div class="hero__badges">
+                    <span class="badge badge--primary">
+                        <i data-lucide="wifi-off" style="width:14px;height:14px"></i>
+                        100% Offline
+                    </span>
+                    <span class="badge badge--success">
+                        <i data-lucide="badge-check" style="width:14px;height:14px"></i>
+                        Sem Mensalidade
+                    </span>
+                </div>
+
+                <h1 class="hero__title">
+                    Controle de Ponto com
+                    <span class="gradient-text">Reconhecimento Facial</span>
+                    por IA
+                </h1>
+
+                <p class="hero__subtitle">
+                    Elimine fraudes, evite processos trabalhistas e controle seus funcionários
+                    com a mesma tecnologia usada por bancos - <strong>por uma fração do preço</strong>
+                </p>
+
+                <div class="hero__cta">
+                    <a href="#preco" class="btn btn--primary btn--large">
+                        QUERO PROTEGER MINHA EMPRESA
+                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                    </a>
+                    <a href="#como-funciona" class="btn btn--outline">
+                        <i data-lucide="play-circle" style="width:20px;height:20px"></i>
+                        Ver Demonstração
+                    </a>
+                </div>
+
+                <div class="hero__trust">
+                    <div class="trust-item">
+                        <i data-lucide="shield-check" class="trust-icon"></i>
+                        <span>Garantia de 7 dias</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="lock" class="trust-icon"></i>
+                        <span>Dados criptografados</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="monitor" class="trust-icon"></i>
+                        <span>Funciona offline</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__image" data-aos="fade-left">
+                <div class="mockup">
+                    <div class="mockup__screen">
+                        <div class="mockup__header">
+                            <span class="mockup__dot"></span>
+                            <span class="mockup__dot"></span>
+                            <span class="mockup__dot"></span>
+                        </div>
+                        <div class="mockup__content">
+                            <div class="mockup__camera">
+                                <div class="camera-circle">
+                                    <i data-lucide="scan-face" style="width:64px;height:64px;color:#3b82f6"></i>
+                                </div>
+                                <div class="scan-line"></div>
+                            </div>
+                            <div class="mockup__info">
+                                <span class="mockup__status mockup__status--success">
+                                    <i data-lucide="check-circle" style="width:16px;height:16px"></i>
+                                    ENTRADA REGISTRADA
+                                </span>
+                                <span class="mockup__name">João Silva</span>
+                                <span class="mockup__time">08:02:45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f8fafc"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== PROBLEMA ========== -->
+    <section class="problema" id="problema">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">O PROBLEMA</span>
+                <h2 class="section-title">Você está <span class="text-danger">PERDENDO</span> dinheiro todos os dias sem saber...</h2>
+            </div>
+
+            <div class="problema__grid">
+                <div class="problema__card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problema__icon problema__icon--danger">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Amigo Bate Ponto</h3>
+                    <p>Funcionário batendo ponto pelo colega. Você paga por quem não está trabalhando.</p>
+                </div>
+
+                <div class="problema__card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problema__icon problema__icon--warning">
+                        <i data-lucide="file-spreadsheet"></i>
+                    </div>
+                    <h3>Planilhas Adulteráveis</h3>
+                    <p>Planilhas de Excel que qualquer um pode alterar. Sem comprovação legal.</p>
+                </div>
+
+                <div class="problema__card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problema__icon problema__icon--danger">
+                        <i data-lucide="scale"></i>
+                    </div>
+                    <h3>Processos Trabalhistas</h3>
+                    <p>Sem comprovante de horas extras para se defender. Condenações de R$15.000 a R$50.000.</p>
+                </div>
+
+                <div class="problema__card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problema__icon problema__icon--warning">
+                        <i data-lucide="wallet"></i>
+                    </div>
+                    <h3>Sistemas Caros</h3>
+                    <p>Concorrentes cobram R$20-50 por funcionário/mês. Com 10 funcionários = R$6.000/ano!</p>
+                </div>
+
+                <div class="problema__card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="problema__icon problema__icon--danger">
+                        <i data-lucide="wifi-off"></i>
+                    </div>
+                    <h3>Dependência de Internet</h3>
+                    <p>Internet cai e ninguém consegue bater ponto. Sistema online = risco constante.</p>
+                </div>
+
+                <div class="problema__card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="problema__icon problema__icon--warning">
+                        <i data-lucide="credit-card"></i>
+                    </div>
+                    <h3>Equipamentos Caros</h3>
+                    <p>REP homologado custa R$2.000 a R$5.000. Fora manutenção e suporte técnico.</p>
+                </div>
+            </div>
+
+            <div class="problema__stat" data-aos="fade-up">
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i data-lucide="alert-triangle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-text">Em 2023, o TST registrou <strong>milhares de processos por horas extras</strong>.</p>
+                        <p class="stat-highlight">Valor médio de condenação: <span class="text-danger">R$15.000 a R$50.000</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOLUCAO ========== -->
+    <section class="solucao" id="solucao">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">A SOLUÇÃO</span>
+                <h2 class="section-title">Apresentamos o <span class="gradient-text">BatePonto</span></h2>
+                <p class="section-subtitle">Seu seguro contra processos trabalhistas</p>
+            </div>
+
+            <div class="solucao__grid">
+                <div class="solucao__card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="solucao__icon">
+                        <i data-lucide="scan-face"></i>
+                    </div>
+                    <h3>Reconhecimento Facial IA</h3>
+                    <p>Tecnologia Facenet512 com 99.4% de precisão. Impossível fraudar.</p>
+                </div>
+
+                <div class="solucao__card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="solucao__icon">
+                        <i data-lucide="shield-alert"></i>
+                    </div>
+                    <h3>Anti-Spoofing</h3>
+                    <p>Detecta tentativas de fraude com foto, vídeo ou tela. Analisa textura e movimento.</p>
+                </div>
+
+                <div class="solucao__card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="solucao__icon">
+                        <i data-lucide="wifi-off"></i>
+                    </div>
+                    <h3>100% Offline</h3>
+                    <p>Funciona sem internet. Seus dados ficam seguros no seu computador.</p>
+                </div>
+
+                <div class="solucao__card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="solucao__icon">
+                        <i data-lucide="cloud-upload"></i>
+                    </div>
+                    <h3>Backup na Nuvem</h3>
+                    <p>Sincroniza automaticamente com Google Sheets. 100% gratuito.</p>
+                </div>
+
+                <div class="solucao__card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="solucao__icon">
+                        <i data-lucide="lock"></i>
+                    </div>
+                    <h3>Criptografia AES</h3>
+                    <p>Mesma segurança usada por bancos. Dados totalmente protegidos.</p>
+                </div>
+
+                <div class="solucao__card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="solucao__icon">
+                        <i data-lucide="piggy-bank"></i>
+                    </div>
+                    <h3>Sem Mensalidade</h3>
+                    <p>Pague uma vez, use para sempre. Sem surpresas na fatura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COMO FUNCIONA ========== -->
+    <section class="como-funciona" id="como-funciona">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">SIMPLES</span>
+                <h2 class="section-title">Como Funciona</h2>
+                <p class="section-subtitle">Em apenas 3 passos simples</p>
+            </div>
+
+            <div class="steps">
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step__number">1</div>
+                    <div class="step__content">
+                        <h3>Cadastre seus Funcionários</h3>
+                        <p>Tire uma foto de cada funcionário e pronto. O sistema já aprende o rosto automaticamente.</p>
+                    </div>
+                    <div class="step__icon">
+                        <i data-lucide="camera"></i>
+                    </div>
+                </div>
+
+                <div class="step__connector"></div>
+
+                <div class="step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step__number">2</div>
+                    <div class="step__content">
+                        <h3>Funcionário Olha para Câmera</h3>
+                        <p>Reconhecimento em menos de 2 segundos. Sem digitar código, sem cartão, sem senha.</p>
+                    </div>
+                    <div class="step__icon">
+                        <i data-lucide="eye"></i>
+                    </div>
+                </div>
+
+                <div class="step__connector"></div>
+
+                <div class="step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step__number">3</div>
+                    <div class="step__content">
+                        <h3>Relatórios Automáticos</h3>
+                        <p>Espelho de ponto, banco de horas, exportação CSV. Tudo pronto para seu contador.</p>
+                    </div>
+                    <div class="step__icon">
+                        <i data-lucide="file-bar-chart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FUNCIONALIDADES ========== -->
+    <section class="funcionalidades" id="funcionalidades">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">RECURSOS</span>
+                <h2 class="section-title">Tudo que você precisa em um só sistema</h2>
+            </div>
+
+            <div class="features__grid">
+                <div class="feature" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature__icon"><i data-lucide="scan-face"></i></div>
+                    <div class="feature__content">
+                        <h4>Reconhecimento Facial IA</h4>
+                        <p>Impossível funcionário bater ponto por outro. Tecnologia de ponta.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="150">
+                    <div class="feature__icon"><i data-lucide="shield-alert"></i></div>
+                    <div class="feature__content">
+                        <h4>Anti-Spoofing Avançado</h4>
+                        <p>Detecta fraudes com foto, vídeo ou tela. Analisa piscar, textura e movimento.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature__icon"><i data-lucide="monitor"></i></div>
+                    <div class="feature__content">
+                        <h4>Modo Quiosque</h4>
+                        <p>Use um tablet ou notebook como totem. Tela cheia, profissional.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature__icon"><i data-lucide="cloud"></i></div>
+                    <div class="feature__content">
+                        <h4>Backup Google Sheets</h4>
+                        <p>Dados seguros na nuvem automaticamente. Sem custo extra.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature__icon"><i data-lucide="file-text"></i></div>
+                    <div class="feature__content">
+                        <h4>Espelho de Ponto</h4>
+                        <p>Gere comprovantes para qualquer período. Prova legal em processos.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="350">
+                    <div class="feature__icon"><i data-lucide="clock"></i></div>
+                    <div class="feature__content">
+                        <h4>Banco de Horas</h4>
+                        <p>Controle automático de horas extras e débitos. Saldo em tempo real.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature__icon"><i data-lucide="table"></i></div>
+                    <div class="feature__content">
+                        <h4>Exportação CSV</h4>
+                        <p>Integre com seu contador ou sistema de folha de pagamento.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="450">
+                    <div class="feature__icon"><i data-lucide="wifi-off"></i></div>
+                    <div class="feature__content">
+                        <h4>100% Offline</h4>
+                        <p>Funciona mesmo sem internet. Sincroniza quando voltar.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature__icon"><i data-lucide="lock"></i></div>
+                    <div class="feature__content">
+                        <h4>Criptografia de Dados</h4>
+                        <p>AES-256, a mesma segurança usada por bancos.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="550">
+                    <div class="feature__icon"><i data-lucide="clipboard-list"></i></div>
+                    <div class="feature__content">
+                        <h4>Auditoria Completa</h4>
+                        <p>Log de todas as ações. Compliance LGPD garantido.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature__icon"><i data-lucide="smartphone"></i></div>
+                    <div class="feature__content">
+                        <h4>Interface Moderna</h4>
+                        <p>Fácil de usar. Qualquer pessoa aprende em minutos.</p>
+                    </div>
+                </div>
+
+                <div class="feature" data-aos="fade-up" data-aos-delay="650">
+                    <div class="feature__icon"><i data-lucide="layout-grid"></i></div>
+                    <div class="feature__content">
+                        <h4>Múltiplos Modos</h4>
+                        <p>GUI, Terminal ou Quiosque. Escolha o que melhor se adapta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COMPARATIVO ========== -->
+    <section class="comparativo" id="comparativo">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">COMPARAÇÃO</span>
+                <h2 class="section-title">Por que o BatePonto é diferente?</h2>
+            </div>
+
+            <div class="table-wrapper" data-aos="fade-up">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th class="compare-other">Concorrentes</th>
+                            <th class="compare-bateponto">BatePonto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Preço</strong></td>
+                            <td class="compare-other">R$20-50/func/mês</td>
+                            <td class="compare-bateponto">Pague uma vez <span class="badge badge--success">ECONOMIZE</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Internet</strong></td>
+                            <td class="compare-other">Necessária sempre</td>
+                            <td class="compare-bateponto">100% Offline <i data-lucide="check" class="check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Equipamento</strong></td>
+                            <td class="compare-other">REP R$2.000+</td>
+                            <td class="compare-bateponto">Webcam R$100 <i data-lucide="check" class="check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fraude</strong></td>
+                            <td class="compare-other">Digital clonável</td>
+                            <td class="compare-bateponto">Facial anti-fraude <i data-lucide="check" class="check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Instalação</strong></td>
+                            <td class="compare-other">Técnico especializado</td>
+                            <td class="compare-bateponto">Você mesmo instala <i data-lucide="check" class="check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backup</strong></td>
+                            <td class="compare-other">Pago extra</td>
+                            <td class="compare-bateponto">Google Sheets grátis <i data-lucide="check" class="check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Atualizações</strong></td>
+                            <td class="compare-other">Pagas</td>
+                            <td class="compare-bateponto">1 ano incluso <i data-lucide="check" class="check-icon"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="comparativo__cta" data-aos="fade-up">
+                <a href="#preco" class="btn btn--primary btn--large">
+                    QUERO O BATEPONTO
+                    <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DEPOIMENTOS ========== -->
+    <section class="depoimentos" id="depoimentos">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">DEPOIMENTOS</span>
+                <h2 class="section-title">Quem usa, recomenda</h2>
+            </div>
+
+            <div class="testimonials__grid">
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial__stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial__text">"Antes eu usava caderninho e vivia com medo de processo. Agora tenho tudo registrado com foto e hora certinha. Melhor investimento que fiz!"</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">H</div>
+                        <div class="testimonial__info">
+                            <strong>Handerson</strong>
+                            <span>Borracharia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial__stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial__text">"Pagava R$400/mês em outro sistema. Com o BatePonto paguei uma vez e nunca mais. Em 2 meses já tinha economizado o valor do investimento."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">M</div>
+                        <div class="testimonial__info">
+                            <strong>Marcos</strong>
+                            <span>Lanchonete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial__stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial__text">"Meus funcionários ficaram impressionados com a tecnologia. E o melhor: impossível um bater ponto pelo outro. Acabou a bagunça!"</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">C</div>
+                        <div class="testimonial__info">
+                            <strong>Carla</strong>
+                            <span>Salão de Beleza</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">DÚVIDAS</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="faq__list" data-aos="fade-up">
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Mas eu só tenho poucos funcionários, preciso mesmo?</span>
+                        <i data-lucide="plus" class="faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Empresas com menos de 20 funcionários não são obrigadas por lei (Art. 74 CLT), mas processos trabalhistas não escolhem tamanho. <strong>Um único processo pode custar R$15.000 a R$50.000</strong>. O BatePonto é seu seguro preventivo - custa muito menos que uma condenação.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>E se a internet cair?</span>
+                        <i data-lucide="plus" class="faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>O BatePonto funciona <strong>100% offline</strong>! Os dados ficam seguros no seu computador e sincronizam automaticamente com a nuvem (Google Sheets) quando a internet voltar. Você nunca perde um registro.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Reconhecimento facial é seguro? Não dá pra burlar com foto?</span>
+                        <i data-lucide="plus" class="faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>O BatePonto tem sistema <strong>Anti-Spoofing avançado</strong> que detecta fotos, vídeos e telas. Analisamos textura da pele, movimento natural e piscar de olhos. É praticamente impossível fraudar - usamos a mesma tecnologia de segurança de bancos.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>E se eu crescer para mais de 20 funcionários?</span>
+                        <i data-lucide="plus" class="faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>O sistema suporta até 20 funcionários na licença padrão. Se sua empresa crescer, <strong>você já estará em conformidade com a CLT</strong> (que exige ponto para empresas com mais de 20 funcionários). Entre em contato para upgrade.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Funciona em qualquer computador?</span>
+                        <i data-lucide="plus" class="faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Sim! Funciona em <strong>Windows 10 ou 11</strong> com webcam. Pode usar até a câmera do notebook. Recomendamos mínimo 4GB de RAM e webcam com boa resolução para melhor reconhecimento.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Como faço backup dos dados?</span>
+                        <i data-lucide="plus" class="faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p><strong>Automático!</strong> O sistema faz backup local automaticamente. Além disso, você pode configurar sincronização com Google Sheets (gratuito) para ter uma cópia na nuvem. Seus dados nunca serão perdidos.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Precisa de técnico para instalar?</span>
+                        <i data-lucide="plus" class="faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p><strong>Não!</strong> A instalação é simples e leva cerca de 10 minutos. Você recebe um manual passo a passo e vídeos de treinamento. Qualquer pessoa consegue instalar e configurar.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Tem garantia?</span>
+                        <i data-lucide="plus" class="faq__icon"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p><strong>7 dias de garantia incondicional!</strong> Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRECO ========== -->
+    <section class="preco" id="preco">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">OFERTA ESPECIAL</span>
+                <h2 class="section-title">Quanto custa proteger sua empresa de processos trabalhistas?</h2>
+            </div>
+
+            <div class="preco__comparison" data-aos="fade-up">
+                <div class="comparison-item">
+                    <span class="comparison-label">Sistemas concorrentes</span>
+                    <span class="comparison-value">R$240 a R$600/ano</span>
+                    <span class="comparison-note">por funcionário</span>
+                </div>
+                <div class="comparison-item">
+                    <span class="comparison-label">REP Homologado</span>
+                    <span class="comparison-value">R$2.000 a R$5.000</span>
+                    <span class="comparison-note">+ manutenção</span>
+                </div>
+                <div class="comparison-item comparison-item--danger">
+                    <span class="comparison-label">Processo trabalhista</span>
+                    <span class="comparison-value">R$15.000 a R$50.000</span>
+                    <span class="comparison-note">em condenação</span>
+                </div>
+            </div>
+
+            <div class="preco__card" data-aos="zoom-in">
+                <div class="preco__badge">MAIS VENDIDO</div>
+
+                <h3 class="preco__name">BatePonto - Licença Completa</h3>
+
+                <div class="preco__value">
+                    <span class="preco__old">De R$997</span>
+                    <span class="preco__current">R$497</span>
+                    <span class="preco__parcela">ou 12x de R$49,70</span>
+                </div>
+
+                <ul class="preco__features">
+                    <li><i data-lucide="check" class="check-icon"></i> Licença perpétua (pague uma vez, use para sempre)</li>
+                    <li><i data-lucide="check" class="check-icon"></i> Até 20 funcionários cadastrados</li>
+                    <li><i data-lucide="check" class="check-icon"></i> Reconhecimento facial com IA</li>
+                    <li><i data-lucide="check" class="check-icon"></i> Anti-spoofing (detecta fraudes)</li>
+                    <li><i data-lucide="check" class="check-icon"></i> 100% offline (funciona sem internet)</li>
+                    <li><i data-lucide="check" class="check-icon"></i> Backup na nuvem (Google Sheets)</li>
+                    <li><i data-lucide="check" class="check-icon"></i> Atualizações por 1 ano</li>
+                    <li><i data-lucide="check" class="check-icon"></i> Suporte por WhatsApp por 90 dias</li>
+                </ul>
+
+                <div class="preco__bonus">
+                    <h4><i data-lucide="gift"></i> BÔNUS GRATUITOS:</h4>
+                    <ul>
+                        <li><i data-lucide="play-circle"></i> Treinamento em vídeo (passo a passo)</li>
+                        <li><i data-lucide="book-open"></i> Manual de implantação completo</li>
+                        <li><i data-lucide="cloud-upload"></i> Configuração do backup na nuvem</li>
+                        <li><i data-lucide="clipboard-check"></i> Checklist de implantação</li>
+                    </ul>
+                </div>
+
+                <a href="#" class="btn btn--primary btn--xlarge preco__cta">
+                    QUERO PROTEGER MINHA EMPRESA
+                </a>
+
+                <div class="preco__garantia">
+                    <i data-lucide="shield-check" class="garantia-icon"></i>
+                    <div class="garantia-text">
+                        <strong>Garantia de 7 Dias</strong>
+                        <p>Se não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA FINAL ========== -->
+    <section class="cta-final" id="cta-final">
+        <div class="container">
+            <div class="cta-final__content" data-aos="fade-up">
+                <h2>Não espere o processo chegar para se proteger</h2>
+                <p>A cada dia sem controle de ponto, você corre o risco de pagar caro em um processo trabalhista. Proteja sua empresa <strong>agora</strong>.</p>
+
+                <div class="cta-final__urgency">
+                    <i data-lucide="alert-circle"></i>
+                    <span>Preço promocional por tempo limitado</span>
+                </div>
+
+                <a href="#preco" class="btn btn--white btn--xlarge">
+                    GARANTIR MINHA LICENÇA AGORA
+                    <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                </a>
+
+                <div class="cta-final__trust">
+                    <span><i data-lucide="lock" style="width:16px;height:16px"></i> Pagamento 100% seguro</span>
+                    <span><i data-lucide="shield-check" style="width:16px;height:16px"></i> Garantia de 7 dias</span>
+                    <span><i data-lucide="message-circle" style="width:16px;height:16px"></i> Suporte por WhatsApp</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">
+                        <i data-lucide="scan-face" class="logo-icon"></i>
+                        <span>Bate<strong>Ponto</strong></span>
+                    </a>
+                    <p>Sistema de Controle de Ponto com Reconhecimento Facial por IA. Proteja sua empresa de processos trabalhistas.</p>
+                </div>
+
+                <div class="footer__links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#funcionalidades">Funcionalidades</a></li>
+                        <li><a href="#comparativo">Comparativo</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#preco">Preços</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>
+                            <a href="https://wa.me/5548998649898" target="_blank">
+                                <i data-lucide="message-circle"></i> WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contato@bateponto.com.br">
+                                <i data-lucide="mail"></i> contato@bateponto.com.br
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2025 BatePonto. Todos os direitos reservados.</p>
+                <div class="footer__legal">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5548998649898" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
